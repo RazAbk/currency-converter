@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Currencty calculator</title>
+  </head>
+  <body onload="init()">
+
+    <h1>Currency converter</h1>
+
+    <div class="calc-container">
+      <input class="amount" type="number" />
+      <select name="currencies" class="from-curr">
+        <option value="USD">USD</option>
+        <option value="ILS">ILS</option>
+      </select>
+      <div class="">to</div>
+      <select name="currencies" class="to-curr">
+        <option value="usd">USD</option>
+        <option value="ILS">ILS</option>
+      </select>
+
+      <button onclick="onConvert()">Convert</button>
+
+      <div class="result">0</div>
+
+    </div>
+
+    <script src="lib/axios.js"></script>
+    <script src="lib/swal.js"></script>
+
+    <script src="js/storage-services/storage-service.js"></script>
+    <script src="js/services/currency-service.js"></script>
+    <script src="js/controllers/currency-controller.js"></script>
+  </body>
+</html>
